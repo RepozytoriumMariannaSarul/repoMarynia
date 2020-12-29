@@ -1,12 +1,14 @@
 package task1;
 
-public class Phone {
+import device.Device;
+
+public class Phone extends Device {
     private String number;
     private String mobile;
 
-    public Phone(String number, String mobile){
-        this.number = number;
-        this.mobile = mobile;
-
+    public Phone(String model, String producer, int yearOfProduction){
+        super(model, producer, yearOfProduction);
     }
+
+
 }

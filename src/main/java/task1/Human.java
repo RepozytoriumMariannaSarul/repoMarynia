@@ -6,6 +6,7 @@ public class Human {
     private final int age;
     private Animal pet;
     private Car car;
+    public double salary;
 
 
     public void setPet(Animal pet){
@@ -29,5 +30,9 @@ public class Human {
         this.age = age;
 
 
+
+    }
+    public Human getSalary(){
+        return this.getSalary();
     }
 }
