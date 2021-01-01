@@ -34,6 +34,14 @@ public class Application {
         car1.turnOn();
 
 
+        Human seller = new Human("Bartek", 36);
+        Animal pet = new Animal("cat");
+        seller.setPet(pet);
+        Human buyer = new Human("Marynia", 35);
+        buyer.setCash(100);
+
+        pet.sell(seller, buyer, 100);
+
 
 
 

@@ -1,6 +1,6 @@
 package task1;
 
-public class Animal {
+public class Animal implements Sellable{
     private String species;
     private Double weight;
 
@@ -39,5 +39,25 @@ public class Animal {
 
     private void printCatIsDead() {
         System.out.println(this.species + " is dead");
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, double price) {
+        if(seller.getPet() != this){
+            throw new IllegalStateException("to nie jest zwierzę sprzedającego");
+        }
+        if(buyer.getCash() < price){
+            throw new IllegalStateException("kupujący nie ma wystarczająco pieniędzy");
+        }
+        System.out.printf(
+                "Przystepuje do sprzedazy zwierzecia za cene %s. Sprzedajacy ma %s pieniedzy kupujacy ma %s pieniedzy%n",
+                price, seller.getCash(), buyer.getCash());
+        buyer.setCash(buyer.getCash() - price);
+        seller.setCash(seller.getCash() + price);
+        seller.setPet(null);
+        buyer.setPet(this);
+        System.out.printf(
+                "Sprzedano zwierze. Sprzedajacy ma %s pieniedzy kupujacy ma %s pieniedzy%n",
+                seller.getCash(), buyer.getCash());
     }
 }
