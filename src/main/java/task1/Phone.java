@@ -9,6 +9,8 @@ public class Phone extends Device {
     public Phone(String model, String producer, int yearOfProduction){
         super(model, producer, yearOfProduction);
     }
-
+    public void turnOn(){
+        System.out.println("Ring");
+    }
 
 }

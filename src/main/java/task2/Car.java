@@ -12,6 +12,9 @@ public class Car extends Device {
         super(model, producer, yearOfProduction);
         this.color = color;
     }
+    public void turnOn(){
+        System.out.println("BRRR");
+    }
     @Override
     public String toString() {
         return super.toString() + ", color =" + this.color;

@@ -1,3 +1,4 @@
+import device.Device;
 import task1.Animal;
 import task1.Human;
 import task1.Phone;
@@ -24,11 +25,13 @@ public class Application {
         pet1.feed();
 
 
+
         Car car1 = new Car("125p", "fiat", 1988, "red");
         person1.setCar(car1);
 
 
         System.out.println(car1.toString());
+        car1.turnOn();
 
 
 
