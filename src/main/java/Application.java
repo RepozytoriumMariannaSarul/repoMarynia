@@ -2,6 +2,7 @@ import task1.creatures.Animal;
 import task1.Human;
 import task1.creatures.Pet;
 import task2.Car;
+import task2.Electric;
 
 public class Application {
     public static void main(String[] args){
@@ -25,7 +26,7 @@ public class Application {
 
 
 
-        Car car1 = new Car("125p", "fiat", 1988, "red");
+        Car car1 = new Electric("125p", "fiat", 1988, "red");
         person1.setCar(car1);
 
 

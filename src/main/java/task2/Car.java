@@ -3,7 +3,7 @@ package task2;
 
 import device.Device;
 
-public class Car extends Device {
+public abstract class Car extends Device {
 
     private final String color;
 
@@ -12,6 +12,8 @@ public class Car extends Device {
         super(model, producer, yearOfProduction);
         this.color = color;
     }
+    public abstract void refuel();
+
     public void turnOn(){
         System.out.println("BRRR");
     }
