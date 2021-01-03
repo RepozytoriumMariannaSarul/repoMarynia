@@ -1,4 +1,5 @@
 package task1;
+import task1.creatures.Animal;
 import task2.Car;
 
 public class Human {

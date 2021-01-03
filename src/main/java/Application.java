@@ -1,14 +1,13 @@
-import device.Device;
-import task1.Animal;
+import task1.creatures.Animal;
 import task1.Human;
-import task1.Phone;
+import task1.creatures.Pet;
 import task2.Car;
 
 public class Application {
     public static void main(String[] args){
         System.out.println("Hello world");
 
-        Animal pet1 = new Animal("cat");
+        Animal pet1 = new Pet("cat");
         Human person1 = new Human("Krzysio", 29);
         person1.setPet(pet1);
         pet1.feed();
@@ -35,7 +34,7 @@ public class Application {
 
 
         Human seller = new Human("Bartek", 36);
-        Animal pet = new Animal("cat");
+        Animal pet = new Pet("cat");
         seller.setPet(pet);
         Human buyer = new Human("Marynia", 35);
         buyer.setCash(100);

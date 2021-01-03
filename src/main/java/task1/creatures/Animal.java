@@ -1,6 +1,9 @@
-package task1;
+package task1.creatures;
 
-public class Animal implements Sellable{
+import task1.Human;
+import task1.Sellable;
+
+public abstract class Animal implements Sellable, Feedable {
     private String species;
     private Double weight;
 
@@ -16,11 +19,14 @@ public class Animal implements Sellable{
     }
 
     public void feed() {
+       feed(1);
+    }
 
+    public void feed(int foodWeight){
         if (this.weight <= 0) {
             printCatIsDead();
         } else {
-            this.weight = this.weight + 1;
+            this.weight = this.weight + foodWeight;
             System.out.println("Fed " + this.species + ". Current weight: " + this.weight);
         }
     }
